@@ -1,0 +1,16 @@
+{
+  "name": "ft_transcendence",
+  "version": "1.0.0",
+  "description": "A webpage for the pong tournament",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "fastify": "^5.2.1"
+  }
+}
