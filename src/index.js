@@ -10,7 +10,7 @@ fastify.register(greetingsController, {prefix: '/greetings'});
 fastify.register(usersController, {prefix: '/users'});
 
 try {
-	fastify.listen({port: 3002})
+	fastify.listen({port: 3002, host: '0.0.0.0'})
 } catch(err) {
 	fastify.log.error(err);
 	process.exit(1);

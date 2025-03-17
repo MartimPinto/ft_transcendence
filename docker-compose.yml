@@ -1,20 +1,12 @@
-version: "3.8"
-
 services:
-  fastify-app:
-    build: .
-    container_name: fastify_app
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "3002:3002"  # Updated port
+      - "3002:3002"
     volumes:
-      - .:/app
+      - ./app.db:/app/app.db
     environment:
       - NODE_ENV=production
-    depends_on:
-      - db
-
-  db:
-    image: nouchka/sqlite3
-    container_name: sqlite_db
-    volumes:
-      - ./src/app.db:/app/app.db
+    restart: always
