@@ -6,6 +6,7 @@ const query = `
 		id INTEGER PRIMARY KEY,
 		username STRING NOT NULL UNIQUE,
 		password STRING NOT NULL,
+		email STRING NOT NULL UNIQUE,
 		created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 	)
 `
