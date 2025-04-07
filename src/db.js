@@ -10,6 +10,9 @@ const query = `
 		created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 	)
 `
-//db.exec(query);
+
+if (db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='users'").get() === undefined) {
+	db.exec(query);
+}
 
 export default db;
